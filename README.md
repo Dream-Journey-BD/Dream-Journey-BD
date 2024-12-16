@@ -17,8 +17,8 @@
 <div align="center">
   
 ## 🌐 Connect with Me 🍬
-[![Facebook Profile](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://www.facebook.com/dream.journey.page/) 
-[![Facebook Page](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://www.facebook.com/dream.journey.page) 
+[![Facebook Profile](https://img.shields.io/badge/Facebook_Profile-1877F2.svg?logo=facebook&logoColor=white)](https://www.facebook.com/dream.journey.page/) 
+[![Facebook Page](https://img.shields.io/badge/Facebook_Page-1877F2.svg?logo=facebook&logoColor=white)](https://www.facebook.com/dream.journey.page) 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-imran-nazir-devloper) 
 [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/Dream_JourneyBD) 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0.svg?logo=Telegram&logoColor=white)](https://t.me/dream_journey_official) 
