@@ -1,7 +1,7 @@
 <!-- Counter -->
 <div align="right">
   
-  [![](https://visitcount.itsvg.in/api?id=Dream-Journey-Official&icon=5&color=6)](https://visitcount.itsvg.in) 
+  [![](https://visitcount.itsvg.in/api?id=Dream-Journey-Official&icon=5&color=6&pretty=true)](https://visitcount.itsvg.in) 
   
 </div>
 
