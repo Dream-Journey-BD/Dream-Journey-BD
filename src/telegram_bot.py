@@ -1,20 +1,17 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters, ContextTypes
 import os
-import requests
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a welcome message when the bot is started."""
     await update.message.reply_text("Hello! I am active. Add me to any group!")
 
 async def reply_to_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Reply with 'Hello' followed by the user's username and IP address when a message is sent in the group."""
+    """Reply with 'Hello' followed by the user's username when a message is sent in the group."""
     if update.message.chat.type in ['group', 'supergroup']:
         username = update.message.from_user.username
         if username:  # Check if the user has a username
-            # Get user's public IP address
-            ip_address = requests.get('https://api.ipify.org').text
-            await update.message.reply_text(f"Hello @{username}, your IP address is {ip_address}")
+            await update.message.reply_text(f"Hello @{username}")
         else:
             await update.message.reply_text("Hello! User has no username.")
 
