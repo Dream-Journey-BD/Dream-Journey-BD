@@ -1,27 +1,28 @@
-name: Telegram Bot
+name: Run Telegram Bot
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  run-bot:
+  run-telegram-bot:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Set Up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: "3.9"
 
       - name: Install Dependencies
-        run: pip install python-telegram-bot --upgrade
+        run: pip install "python-telegram-bot[job-queue]" --upgrade
 
       - name: Run Bot
-        run: python src/telegram_bot.py
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: python src/telegram_bot.py
