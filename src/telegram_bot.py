@@ -7,45 +7,39 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("Hello! I am active. Add me to any group!")
 
 async def reply_to_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Reply with detailed formatted info when a message is sent in the group."""
-    if update.message.chat.type in ['group', 'supergroup']:
-        user = update.message.from_user
-        chat = update.message.chat
-        text = update.message.text
-        username = user.username if user.username else "No username"
+    """Reply with detailed information about the update."""
+    user = update.message.from_user
+    chat = update.message.chat
+    message = update.message
+    username = user.username if user.username else "No username"
+    message_text = message.text if message.text else "No text"
 
-        # Escape special characters for MarkdownV2
-        response_text = (
-            f"**User Info:**\n"
-            f"🔹 **Name**: {user.first_name} {user.last_name}\n"
-            f"🔹 **Username**: @{username}\n"
-            f"🔹 **User ID**: `{user.id}`\n"
-            f"🔹 **Language**: `{user.language_code}`\n\n"
+    # Collecting all relevant information
+    reply_message = (
+        f"User Information:\n"
+        f"ID: {user.id}\n"
+        f"First Name: {user.first_name}\n"
+        f"Last Name: {user.last_name if user.last_name else 'N/A'}\n"
+        f"Username: @{username}\n"
+        f"Language: {user.language_code}\n\n"
 
-            f"**Chat Info:**\n"
-            f"🔹 **Chat ID**: `{chat.id}`\n"
-            f"🔹 **Chat Type**: `{chat.type}`\n"
-            f"🔹 **Chat Title**: `{chat.title if chat.type != 'private' else 'Private Chat'}`\n\n"
+        f"Chat Information:\n"
+        f"ID: {chat.id}\n"
+        f"Type: {chat.type}\n"
+        f"Title: {chat.title if chat.type != 'private' else 'Private chat'}\n"
 
-            f"**Message Info:**\n"
-            f"🔹 **Message ID**: `{update.message.message_id}`\n"
-            f"🔹 **Message Text**: *{text}*\n"
-            f"🔹 **Date**: `{update.message.date}`\n\n"
+        f"Message Information:\n"
+        f"Message ID: {message.message_id}\n"
+        f"Text: {message_text}\n"
+        f"Date: {message.date}\n\n"
 
-            f"**Bot Info:**\n"
-            f"🔹 **Bot Name**: [@{context.bot.username}](https://t.me/{context.bot.username})\n"
-            f"🔹 **Bot ID**: `{context.bot.id}`\n\n"
+        f"Additional Information:\n"
+        f"Update ID: {update.update_id}\n"
+        f"Entities: {message.entities if message.entities else 'No entities'}\n"
+    )
 
-            f"**Additional Info:**\n"
-            f"🔹 **Update ID**: `{update.update_id}`\n"
-            f"🔹 **Is Group**: `True` if the message is from a group, `False` otherwise.\n"
-        )
-
-        # Escape special characters in response text for MarkdownV2
-        response_text = response_text.replace("|", "\\|")
-
-        # Send formatted response
-        await update.message.reply_text(response_text, parse_mode="MarkdownV2")
+    # Reply with the collected data
+    await update.message.reply_text(reply_message)
 
 def main():
     """Main function to start the bot."""
