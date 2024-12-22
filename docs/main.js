@@ -1,14 +1,15 @@
-// Fetch data from the Pexels API using the GET request with headers
-fetch('https://www.pexels.com/en-us/api/v3/sponsored-media/photos/car?number=4&page=1', {
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+const targetUrl = 'https://www.pexels.com/en-us/api/v3/sponsored-media/photos/car?number=4&page=1';
+
+fetch(proxyUrl + targetUrl, {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
-        'secret-key': 'H2jk9uKnhRmL6WPwh89zBezWvr'
+        'secret-key': 'H2jk9uKnhRmL6WPwh89zBezWvr', // Make sure your key is valid
     }
 })
-    .then(response => response.json()) // Parse the response to JSON
+    .then(response => response.json())
     .then(data => {
-        // Display the raw data inside the 'data' div
         document.getElementById('data').textContent = JSON.stringify(data, null, 2);
     })
     .catch(error => {
