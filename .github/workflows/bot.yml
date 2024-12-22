@@ -1,4 +1,4 @@
-name: Run Telegram Bot
+name: Telegram Bot
 
 on:
   push:
@@ -20,9 +20,11 @@ jobs:
           python-version: "3.9"
 
       - name: Install Dependencies
-        run: pip install "python-telegram-bot[job-queue]" --upgrade
+        run: pip install python-telegram-bot
 
       - name: Run Bot
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: python src/telegram_bot.py
+        run: |
+          nohup python src/telegram_bot.py &
+          echo "Bot is running in the background"
