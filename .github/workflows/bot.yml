@@ -22,8 +22,6 @@ jobs:
         run: pip install python-telegram-bot
 
       - name: Run Bot
-        run: python telegram_bot.py
+        run: python src/telegram_bot.py  # Adjusted path
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-
-
