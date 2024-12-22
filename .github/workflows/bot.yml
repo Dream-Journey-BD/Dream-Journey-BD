@@ -1,29 +1,33 @@
-name: Telegram Bot
+name: Telegram Bot Deployment
 
+# Trigger the workflow when there is a push to the main branch or a manual trigger
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - main  # Trigger on pushes to the main branch
+  workflow_dispatch:  # Allow the workflow to be manually triggered
 
 jobs:
-  run-telegram-bot:
-    runs-on: ubuntu-latest
+  deploy-bot:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu image for the job
 
     steps:
       - name: Checkout Code
+        # Checkout the repository code to the runner
         uses: actions/checkout@v3
 
       - name: Set Up Python
+        # Set up Python version 3.9 for the bot to run
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
 
       - name: Install Dependencies
-        run: |
-          pip install python-telegram-bot
+        # Install the necessary dependencies like python-telegram-bot library
+        run: pip install python-telegram-bot
 
       - name: Run Bot
+        # Run the bot script (telegram_bot.py) with the required environment variables
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: python src/telegram_bot.py
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}  # Fetch the bot token securely from GitHub Secrets
+        run: python src/telegram_bot.py  # Run the main Python bot script
