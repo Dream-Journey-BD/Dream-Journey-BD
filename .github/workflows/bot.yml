@@ -19,9 +19,9 @@ jobs:
           python-version: 3.9
 
       - name: Install Dependencies
-        run: pip install python-telegram-bot
+        run: pip install python-telegram-bot --upgrade
 
       - name: Run Bot
-        run: python src/telegram_bot.py  # Adjusted path
+        run: python src/telegram_bot.py
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
