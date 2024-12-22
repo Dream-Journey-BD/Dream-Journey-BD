@@ -1,4 +1,4 @@
-name: Telegram Bot
+name: Telegram Bot Workflow
 
 on:
   push:
@@ -21,9 +21,11 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install requests python-telegram-bot  # Directly install dependencies
+          pip install python-telegram-bot
+          pip install requests  # Install any other necessary libraries
 
-      - name: Run Bot
+      - name: Run Telegram Bot
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: python src/telegram_bot.py
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}  # Set up your secret bot token
+        run: |
+          python src/telegram_bot.py  # This will run your script and send the "Workflow Start" message to all groups
