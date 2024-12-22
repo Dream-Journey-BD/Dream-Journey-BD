@@ -1,4 +1,4 @@
-name: Start Telegram Bot
+name: Telegram Bot
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  start-bot:
+  run-telegram-bot:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,11 +20,10 @@ jobs:
           python-version: "3.9"
 
       - name: Install Dependencies
-        run: pip install python-telegram-bot requests
+        run: |
+          pip install python-telegram-bot
 
-      - name: Run Bot and Send Welcome Message
+      - name: Run Bot
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          GROUP_CHAT_ID: ${{ secrets.GROUP_CHAT_ID }}
-        run: |
-          python src/telegram_bot.py
+        run: python src/telegram_bot.py
