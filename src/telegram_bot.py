@@ -31,24 +31,24 @@ async def get_my_info(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
 
     # Collect all relevant information in a formatted string
     reply_message = (
-        f"User Information:\n"
+        f"**User Information:**\n"
         f"ID: {user.id}\n"  # User's unique ID
         f"First Name: {user.first_name}\n"  # User's first name
         f"Last Name: {user.last_name if user.last_name else 'N/A'}\n"  # User's last name (if available)
         f"Username: @{username}\n"  # User's Telegram username
         f"Language: {user.language_code}\n\n"  # User's language code
 
-        f"Chat Information:\n"
+        f"**Chat Information:**\n"
         f"ID: {chat.id}\n"  # Chat's unique ID
         f"Type: {chat.type}\n"  # Type of chat (private, group, supergroup, etc.)
         f"Title: {chat.title if chat.type != 'private' else 'Private chat'}\n"  # Chat title (if it's a group chat)
 
-        f"Message Information:\n"
+        f"**Message Information:**\n"
         f"Message ID: {message.message_id}\n"  # Unique ID of the message
         f"Text: {message_text}\n"  # The text content of the message
         f"Date: {message.date}\n\n"  # Date the message was sent
 
-        f"Additional Information:\n"
+        f"**Additional Information:**\n"
         f"Update ID: {update.update_id}\n"  # Unique ID of the update
         f"Entities: {message.entities if message.entities else 'No entities'}\n"  # Message entities (if any)
     )
