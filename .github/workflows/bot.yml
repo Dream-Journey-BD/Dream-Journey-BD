@@ -20,10 +20,10 @@ jobs:
           python-version: "3.9"
 
       - name: Install Dependencies
-        run: pip install python-telegram-bot
+        run: |
+          pip install -r requirements.txt  # Ensure dependencies are installed
 
       - name: Run Bot
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: |
-          python src/telegram_bot.py
+        run: python src/telegram_bot.py
