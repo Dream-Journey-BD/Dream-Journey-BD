@@ -22,6 +22,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install python-telegram-bot
+          pip install requests  # Add the requests module here
 
       - name: Run Bot
         env:
