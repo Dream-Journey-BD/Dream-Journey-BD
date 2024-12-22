@@ -12,7 +12,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 # Define the function to handle the /getmyinfo command
 async def get_my_info(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Reply with detailed information about the user, message, and chat."""
+    # Reply with detailed information about the user, message, and chat.
 
     # Get the user who sent the message
     user = update.message.from_user
@@ -74,19 +74,8 @@ def main():
     # Add handler for the /getmyinfo command to send detailed information
     application.add_handler(CommandHandler("getmyinfo", get_my_info))
 
-    # Add handler for handling text messages (not commands)
-    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, reply_to_message))
-
     # Run the bot to listen for incoming messages and commands
     application.run_polling()
-
-# Function to handle replies for non-command messages (e.g., when the user sends a message in a group)
-async def reply_to_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Reply with 'Hello' when a message is sent in the group."""
-    # Check if the message was sent in a group or supergroup
-    if update.message.chat.type in ['group', 'supergroup']:
-        # Reply with a simple greeting
-        await update.message.reply_text("Hello")
 
 # Run the main function to start the bot when the script is executed
 if __name__ == "__main__":
