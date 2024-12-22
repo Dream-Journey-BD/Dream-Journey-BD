@@ -2,10 +2,7 @@ name: Telegram Bot Deployment
 
 # Trigger the workflow when there is a push to the main branch or a manual trigger
 on:
-  push:
-    branches:
-      - main  # Trigger on pushes to the main branch
-  workflow_dispatch:  # Allow the workflow to be manually triggered
+ workflow_dispatch:  # Allow the workflow to be manually triggered
 
 jobs:
   deploy-bot:
