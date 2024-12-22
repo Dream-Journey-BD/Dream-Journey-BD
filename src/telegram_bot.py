@@ -14,7 +14,7 @@ async def reply_to_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -
         text = update.message.text
         username = user.username if user.username else "No username"
 
-        # Formatting message with bold, mono, and other formats
+        # Escape special characters for MarkdownV2
         response_text = (
             f"**User Info:**\n"
             f"🔹 **Name**: {user.first_name} {user.last_name}\n"
@@ -40,6 +40,9 @@ async def reply_to_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             f"🔹 **Update ID**: `{update.update_id}`\n"
             f"🔹 **Is Group**: `True` if the message is from a group, `False` otherwise.\n"
         )
+
+        # Escape special characters in response text for MarkdownV2
+        response_text = response_text.replace("|", "\\|")
 
         # Send formatted response
         await update.message.reply_text(response_text, parse_mode="MarkdownV2")
