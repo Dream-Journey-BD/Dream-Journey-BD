@@ -1,5 +1,5 @@
 // Fetch data from the Pexels API using the GET request with headers
-fetch('https://unsplash.com/napi/search/photos?orientation=portrait&page=2&per_page=20&query=anime', {
+fetch('https://www.pexels.com/en-us/api/v3/sponsored-media/photos/car?number=4&page=1', {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
