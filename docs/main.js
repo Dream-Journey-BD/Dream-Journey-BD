@@ -1,10 +1,24 @@
-// src/apiLogic.js
+const express = require('express');
+const fetch = require('node-fetch'); // For making API requests
 
-// Fetch data from the API
-const fetchData = async (number = 4, page = 1) => {
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware to add CORS headers
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://www.pexels.com/search/car/'); // Allow all origins
+  res.setHeader('Access-Control-Allow-Methods', 'GET'); // Allow specific methods
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow specific headers
+  next();
+});
+
+// Route to handle requests and fetch data from the external API
+app.get('/api/photos', async (req, res) => {
+  const { number = 4, page = 1 } = req.query;
+
+  const url = `https://www.pexels.com/en-us/api/v3/sponsored-media/photos/car?number=${number}&page=${page}`;
+
   try {
-    const url = `https://www.pexels.com/en-us/api/v3/sponsored-media/photos/car?number=${number}&page=${page}`;
-
     const response = await fetch(url, {
       method: 'GET',
       headers: {
@@ -17,34 +31,15 @@ const fetchData = async (number = 4, page = 1) => {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    return await response.json();
+    const data = await response.json();
+    res.status(200).json(data); // Send the JSON response to the client
   } catch (error) {
     console.error('Error fetching data:', error);
-    return null;
+    res.status(500).json({ error: 'Failed to fetch data from the external API' });
   }
-};
+});
 
-// Process the API response
-const processAPIData = async (params) => {
-  const { number, page } = params;
-
-  // Fetch data using the fetchData function
-  const data = await fetchData(number, page);
-
-  // Log the data (replace this with any processing logic)
-  console.log('API Response:', data);
-
-  return data;
-};
-
-// Main function to handle API requests based on URL parameters
-const main = async () => {
-  const params = new URLSearchParams(window.location.search);
-  const number = params.get('number') || 4; // Default: 4
-  const page = params.get('page') || 1;    // Default: 1
-
-  await processAPIData({ number, page });
-};
-
-// Run the main function
-main();
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
