@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://www.pexels.com/search/car/'); // Allow all origins
   res.setHeader('Access-Control-Allow-Methods', 'GET'); // Allow specific methods
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow specific headers
+  // Allow specific headers
   next();
 });
 
