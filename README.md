@@ -10,7 +10,7 @@
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Dream-Journey-Official&theme=aura&hide_border=true&include_all_commits=true&count_private=true" width="46.5%" /> <!--</br> -->
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Dream-Journey-Official&theme=aura&hide_border=true" width="51%" />
-  <!--<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dream-Journey-Official&theme=aura&hide_border=true&include_all_commits=true&count_private=true&layout=compact" width="36%" /> </br> -->
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dream-Journey-Official&theme=aura&hide_border=true&include_all_commits=true&count_private=true&layout=compact" width="36%" /> </br>
 </div>
 
 <!-- Socials -->
