@@ -1,17 +1,10 @@
 <!-- Counter -->
 <div align="right">
   
-  [![](https://visitcount.itsvg.in/api?id=Dream-Journey-Official&icon=5&color=6&pretty=true)](https://visitcount.itsvg.in) 
+  <img src="https://play-lh.googleusercontent.com/uyll37trGP5VrGnmNUHjPnH7VgcAf2Jp82f0mZvMwfPblkgyI25jy-X4G34_7_cyLtE=w3840-h2160" alt="Banner"/>
   
 </div>
 
-
-<!-- Stats -->
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Dream-Journey-Official&theme=aura&hide_border=true&include_all_commits=true&count_private=true" width="46.5%"  alt="All Commits"/> <!--</br> -->
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Dream-Journey-Official&theme=aura&hide_border=true" width="51%"  alt="Streak Stats"/>
-  <!--<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dream-Journey-Official&theme=aura&hide_border=true&include_all_commits=true&count_private=true&layout=compact" width="36%" /> </br> -->
-</div>
 
 <!-- Socials -->
 <div align="center">
