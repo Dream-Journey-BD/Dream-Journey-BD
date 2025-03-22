@@ -1,7 +1,7 @@
 <!-- Counter -->
 <div align="right">
   
-  <img src="https://play-lh.googleusercontent.com/uyll37trGP5VrGnmNUHjPnH7VgcAf2Jp82f0mZvMwfPblkgyI25jy-X4G34_7_cyLtE=w3840-h2160" alt="Banner"/>
+  <img src="https://raw.githubusercontent.com/Dream-Journey-BD/Dream-Journey-BD/refs/heads/main/github_cover_Image.jpg" alt="Banner"/>
   
 </div>
 
