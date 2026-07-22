@@ -1,19 +1,15 @@
 <!-- Counter -->
 <div align="right">
-  
   <img src="https://raw.githubusercontent.com/Dream-Journey-BD/Dream-Journey-BD/refs/heads/main/github_cover_Image.jpg" alt="Banner"/>
-  
 </div>
-
 
 <!-- Socials -->
 <div align="center">
-  
 ## 🌐 Connect with Me 🍬
 [![Facebook Profile](https://img.shields.io/badge/Profile-1877F2.svg?logo=facebook&logoColor=white)](https://www.facebook.com/md.imran.nazir.developer) 
-[![Facebook Page](https://img.shields.io/badge/Page-1877F2.svg?logo=facebook&logoColor=white)](https://www.facebook.com/dream.journey.page) 
+[![Facebook Page](https://img.shields.io/badge/Page-1877F2.svg?logo=facebook&logoColor=white)](https://www.facebook.com/Dream.Journey.FB/) 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-imran-nazir-developer) 
-[![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/Dream_JourneyBD) 
+[![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/DreamJourneyBD) 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0.svg?logo=Telegram&logoColor=white)](https://t.me/Dream_JourneyBD) 
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://www.youtube.com/@DreamJourneyOfficial) 
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/X9wzJzcz)
@@ -24,6 +20,5 @@
 
 <!-- Snake -->
 <div align="center">
-    
   ![snake gif](https://github.com/Dream-Journey-Official/Dream-Journey-Official/blob/output/github-snake.svg)
 </div>
