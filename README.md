@@ -5,7 +5,9 @@
 
 <!-- Socials -->
 <div align="center">
+  
 ## 🌐 Connect with Me 🍬
+  
 [![Facebook Profile](https://img.shields.io/badge/Profile-1877F2.svg?logo=facebook&logoColor=white)](https://www.facebook.com/md.imran.nazir.developer) 
 [![Facebook Page](https://img.shields.io/badge/Page-1877F2.svg?logo=facebook&logoColor=white)](https://www.facebook.com/Dream.Journey.FB/) 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-imran-nazir-developer) 
@@ -20,5 +22,7 @@
 
 <!-- Snake -->
 <div align="center">
+  
   ![snake gif](https://github.com/Dream-Journey-Official/Dream-Journey-Official/blob/output/github-snake.svg)
+  
 </div>
